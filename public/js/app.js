@@ -8,7 +8,7 @@ const data = document.querySelector("#p3");
 weatherForm.addEventListener("submit", (event) => {
   event.preventDefault();
   loading.textContent = 'laoding'
-  fetch(`http://localhost:3000/weather?address=${search.value}`).then((res) => {
+  fetch(`/weather?address=${search.value}`).then((res) => {
     res
       .json()
       .then((resData) => {
